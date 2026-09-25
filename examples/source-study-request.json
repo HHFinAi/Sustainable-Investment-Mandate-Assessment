@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "mode": "source-study",
+  "as_of": "2026-09-25",
+  "route": "sfdr-mandate",
+  "subject": {
+    "id": "FICTIONAL-SUBJECT",
+    "name": "Fictional HHFinAi research subject"
+  },
+  "mandate": {
+    "objective": "Bounded official-methodology source study; no issuer diligence or investment approval.",
+    "base_currency": "USD",
+    "horizon": "Illustrative five-year scenario",
+    "constraints": "No actual positions, trading, clients or real issuers.",
+    "risk_budget": "Zero capital allocated: synthetic demonstration",
+    "jurisdiction": "Illustrative only; legal access not assessed"
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [
+    {
+      "id": "FICTIONAL-INSTRUMENT",
+      "name": "Fictional non-investable test instrument",
+      "asset_type": "equity",
+      "currency": "USD",
+      "market_access": "not-investable",
+      "label": "none"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "METHOD-1",
+      "title": "SFDR Regulation (EU) 2019/2088",
+      "publisher": "Official framework publisher identified in primary URL",
+      "uri": "https://eur-lex.europa.eu/eli/reg/2019/2088/oj",
+      "locator": "Official page heading and overview",
+      "kind": "methodology",
+      "review_status": "REVIEWED",
+      "scope": [
+        "methodology"
+      ],
+      "observed_on": "2019-11-27",
+      "available_on": "2019-11-27",
+      "retrieved_on": "2026-09-25",
+      "metrics": []
+    }
+  ]
+}

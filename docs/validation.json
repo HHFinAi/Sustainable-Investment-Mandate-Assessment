@@ -1,0 +1,40 @@
+{
+  "agent": "sustainable-investment-mandate-agent",
+  "version": "0.2.0",
+  "validated_on": "2026-09-25",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "unit_test_executions": 120,
+  "domain_unit_tests": 13,
+  "unit_tests": "PASS",
+  "schema_validations": 39,
+  "schema_validation": "PASS",
+  "routes": [
+    {
+      "route": "sfdr-mandate",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 10,
+      "packet_digest": "a366c1cbbe921a989da7488038c65a11a84d2ba67acd4c3a5826dc18a6f5fadd",
+      "execution_authorized": false
+    },
+    {
+      "route": "uk-sdr-mandate",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 10,
+      "packet_digest": "98212876db68c006dd2025e6b515b81f977658122e2d6c1010018d948ffe2c03",
+      "execution_authorized": false
+    },
+    {
+      "route": "custom-mandate",
+      "status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+      "stage_count": 10,
+      "packet_digest": "d97f18f502587f9b9c69f5ea575171b0a7c14ab62b44e31fd65f58691d5fdc0f",
+      "execution_authorized": false
+    }
+  ],
+  "source_study_status": "NEEDS_DATA",
+  "live_research_performed": false,
+  "remote_github_actions_run": false,
+  "production_certification": false,
+  "repository_checks": "PASS"
+}

@@ -1,0 +1,12 @@
+stage,claim_id,kind,claim,scope,period,evidence_ids
+mandate,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+evidence,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+rulebook,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+qualification,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+valuation,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+valuation,CALC1,CALCULATION,"Recomputed illustrative mandate_bounds; inspect arguments, units and result in calculation C1.",FICTIONAL-SUBJECT,2026-09-25,
+compliance,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+market,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+expression,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+challenge,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
+memo,A1,ASSUMPTION,"Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",FICTIONAL-SUBJECT,2026-09-25,
