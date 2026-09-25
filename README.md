@@ -1,5 +1,7 @@
 # Sustainable-Investment Mandate Assessment Agent
 
+[![Validate research workflow](https://github.com/HHFinAi/Sustainable-Investment-Mandate-Assessment/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Sustainable-Investment-Mandate-Assessment/actions/workflows/validate.yml)
+
 **Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
 
 Does the evidence support the stated fund mandate under the versioned prospectus and applicable rulebook, and where is the result unknown?
