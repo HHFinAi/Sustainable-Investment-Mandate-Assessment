@@ -1,0 +1,6 @@
+{
+  "confirmed_pass_weight": 0.55,
+  "confirmed_fail_weight": 0.2,
+  "unknown_weight": 0.25,
+  "minimum_weight": 0.7
+}

@@ -1,0 +1,83 @@
+{
+  "agent": "sustainable-investment-mandate-agent",
+  "version": "0.2.0",
+  "operations": [
+    {
+      "operation": "combine_mandatory_rules",
+      "signature": "(rules: 'list[dict]') -> 'dict'",
+      "argument_units": {
+        "rules": "rule_records"
+      },
+      "output_unit": "mandatory_rule_result",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "dscr",
+      "signature": "(cash_available: 'float', debt_service: 'float') -> 'float'",
+      "argument_units": {
+        "cash_available": "$money",
+        "debt_service": "$money"
+      },
+      "output_unit": "multiple",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "holding_period_return",
+      "signature": "(initial_dirty_price: 'float', exit_dirty_price: 'float', cash_income: 'float', funding_cost: 'float', transaction_cost: 'float') -> 'float'",
+      "argument_units": {
+        "initial_dirty_price": "$money",
+        "exit_dirty_price": "$money",
+        "cash_income": "$money",
+        "funding_cost": "$money",
+        "transaction_cost": "$money"
+      },
+      "output_unit": "decimal_return",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "mandate_bounds",
+      "signature": "(confirmed_pass_weight: 'float', confirmed_fail_weight: 'float', unknown_weight: 'float', minimum_weight: 'float') -> 'dict'",
+      "argument_units": {
+        "confirmed_pass_weight": "decimal",
+        "confirmed_fail_weight": "decimal",
+        "unknown_weight": "decimal",
+        "minimum_weight": "decimal"
+      },
+      "output_unit": "mandate_bounds",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "npv",
+      "signature": "(cashflows: 'list[float]', annual_discount: 'float') -> 'float'",
+      "argument_units": {
+        "cashflows": "$money",
+        "annual_discount": "decimal"
+      },
+      "output_unit": "$money",
+      "description": "Periodic NPV; cashflows[0] is at time zero, then annual periods."
+    },
+    {
+      "operation": "post_trade_fraction",
+      "signature": "(current_nav: 'float', current_qualifying: 'float', sale_qualifying: 'float', purchase_qualifying: 'float', net_flow: 'float') -> 'dict'",
+      "argument_units": {
+        "current_nav": "$money",
+        "current_qualifying": "$money",
+        "sale_qualifying": "$money",
+        "purchase_qualifying": "$money",
+        "net_flow": "$money"
+      },
+      "output_unit": "post_trade_qualifying_fraction",
+      "description": "See source code and domain methodology for assumptions."
+    },
+    {
+      "operation": "scale",
+      "signature": "(value: 'float', factor: 'float') -> 'float'",
+      "argument_units": {
+        "value": "$input_unit",
+        "factor": "conversion_factor"
+      },
+      "output_unit": "$output_unit",
+      "description": "Explicit arithmetic conversion; external unit semantics need human review."
+    }
+  ]
+}

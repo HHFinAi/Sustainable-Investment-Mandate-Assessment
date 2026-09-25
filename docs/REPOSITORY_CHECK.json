@@ -1,0 +1,8 @@
+{
+  "agent": "sustainable-investment-mandate-agent",
+  "routes": 3,
+  "stages": 10,
+  "operations": 7,
+  "checks": "PASS",
+  "remote_urls_checked": false
+}

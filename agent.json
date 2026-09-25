@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0",
+  "name": "sustainable-investment-mandate-agent",
+  "title": "Sustainable-Investment Mandate Assessment Agent",
+  "owner": "HHFinAi",
+  "version": "0.2.0",
+  "default_route": "sfdr-mandate",
+  "routes": {
+    "sfdr-mandate": {
+      "title": "Sfdr Mandate",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "rulebook",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "qualification",
+          "depends_on": [
+            "rulebook"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "qualification"
+          ]
+        },
+        {
+          "id": "compliance",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond",
+        "fund"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "uk-sdr-mandate": {
+      "title": "Uk Sdr Mandate",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "rulebook",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "qualification",
+          "depends_on": [
+            "rulebook"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "qualification"
+          ]
+        },
+        {
+          "id": "compliance",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond",
+        "fund"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    },
+    "custom-mandate": {
+      "title": "Custom Mandate",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "rulebook",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "qualification",
+          "depends_on": [
+            "rulebook"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "qualification"
+          ]
+        },
+        {
+          "id": "compliance",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "compliance"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "equity",
+        "bond",
+        "fund"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ]
+    }
+  },
+  "stages": {
+    "mandate": {
+      "id": "mandate",
+      "title": "Mandate and investable decision",
+      "required_sections": [
+        "decision_question",
+        "instrument_boundary",
+        "mandate_constraints"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/mandate.md",
+      "investment_gate": false
+    },
+    "evidence": {
+      "id": "evidence",
+      "title": "Evidence intake and reconciliation",
+      "required_sections": [
+        "source_register_review",
+        "boundary_reconciliation",
+        "material_gaps"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/evidence.md",
+      "investment_gate": false
+    },
+    "rulebook": {
+      "id": "rulebook",
+      "title": "Mandate and applicability register",
+      "required_sections": [
+        "prospectus_binding_elements",
+        "jurisdiction_version_dates",
+        "product_vs_issuer",
+        "interpretation_log"
+      ],
+      "standard_ids": [
+        "SFDR-BASE",
+        "SFDR-REVIEW",
+        "FCA-SDR"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/rulebook.md",
+      "investment_gate": false
+    },
+    "qualification": {
+      "id": "qualification",
+      "title": "Issuer sustainable-investment evidence",
+      "required_sections": [
+        "contribution_test",
+        "dnsh_adverse_impacts",
+        "governance",
+        "taxonomy_separate"
+      ],
+      "standard_ids": [
+        "SFDR-BASE"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/qualification.md",
+      "investment_gate": false
+    },
+    "valuation": {
+      "id": "valuation",
+      "title": "Portfolio thresholds and uncertainty",
+      "required_sections": [
+        "denominator_reconciliation",
+        "confirmed_vs_unknown",
+        "mandatory_gates",
+        "exceptions"
+      ],
+      "standard_ids": [
+        "SFDR-BASE",
+        "FCA-SDR"
+      ],
+      "requires_calculation": true,
+      "prompt_path": "prompts/stages/valuation.md",
+      "investment_gate": false,
+      "allowed_operations": [
+        "mandate_bounds",
+        "combine_mandatory_rules",
+        "post_trade_fraction"
+      ]
+    },
+    "compliance": {
+      "id": "compliance",
+      "title": "Independent interpretation and sign-off preparation",
+      "required_sections": [
+        "exceptions_and_breaches",
+        "remediation_options",
+        "disclosure_consistency",
+        "compliance_review"
+      ],
+      "standard_ids": [
+        "SFDR-BASE",
+        "FCA-SDR"
+      ],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/compliance.md",
+      "investment_gate": false
+    },
+    "market": {
+      "id": "market",
+      "title": "Market context and implementation evidence",
+      "required_sections": [
+        "market_or_contract_evidence",
+        "liquidity_funding_access",
+        "portfolio_context"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/market.md",
+      "investment_gate": false
+    },
+    "expression": {
+      "id": "expression",
+      "title": "Investment-decision handoff",
+      "required_sections": [
+        "valuation_and_entry",
+        "risk_catalysts_and_thesis_breakers",
+        "eligibility_review"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/expression.md",
+      "investment_gate": true
+    },
+    "challenge": {
+      "id": "challenge",
+      "title": "Independent challenge and exceptions",
+      "required_sections": [
+        "source_challenge",
+        "model_and_method_limits",
+        "material_issues"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/challenge.md",
+      "investment_gate": false
+    },
+    "memo": {
+      "id": "memo",
+      "title": "Investment committee and accountable review",
+      "required_sections": [
+        "investment_question_and_answer",
+        "financial_vs_sustainability_conclusions",
+        "evidence_and_calculations",
+        "decision_conditions_and_limits"
+      ],
+      "standard_ids": [],
+      "requires_calculation": false,
+      "prompt_path": "prompts/stages/memo.md",
+      "investment_gate": false,
+      "required_assessments": {
+        "rulebook_verified": [
+          "verified_for_scope",
+          "not_verified"
+        ],
+        "issuer_not_product_classification": [
+          true
+        ],
+        "unknown_not_pass": [
+          true
+        ],
+        "legal_certification": [
+          false
+        ],
+        "proposal_as_law": [
+          false
+        ]
+      }
+    }
+  },
+  "demo_operation": "mandate_bounds",
+  "demo_arguments": {
+    "confirmed_pass_weight": 0.55,
+    "confirmed_fail_weight": 0.2,
+    "unknown_weight": 0.25,
+    "minimum_weight": 0.7
+  },
+  "demo_assessment": "Fictional fund: 55% confirmed qualifying, 20% non-qualifying and 25% unknown against a user-supplied 70% test produces UNKNOWN, not a pass.",
+  "demo_domain_assessment": {
+    "rulebook_verified": "not_verified",
+    "issuer_not_product_classification": true,
+    "unknown_not_pass": true,
+    "legal_certification": false,
+    "proposal_as_law": false
+  },
+  "capabilities": {
+    "embedded_llm": false,
+    "live_data": false,
+    "trade_execution": false,
+    "scheduler": false,
+    "external_communications": false,
+    "authenticated_human_identity": false
+  }
+}
