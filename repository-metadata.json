@@ -1,6 +1,6 @@
 {
   "owner": "HHFinAi",
-  "repository_name": "sustainable-investment-mandate-agent",
+  "repository_name": "Sustainable-Investment-Mandate-Assessment",
   "description": "Mandate assessment: institutional-quality buy-side research with traceable, auditable workflows and investment-decision handoffs. Research support, not certification or trading.",
   "topics": [
     "sustainable-finance",
@@ -14,7 +14,9 @@
     "sfdr",
     "uk-sdr"
   ],
-  "publication_status": "prepared-not-published",
-  "intended_repository_url": "https://github.com/HHFinAi/sustainable-investment-mandate-agent",
-  "homepage": null
+  "publication_status": "published",
+  "homepage": null,
+  "repository_url": "https://github.com/HHFinAi/Sustainable-Investment-Mandate-Assessment",
+  "visibility": "public",
+  "publication_status_checked_on": "2026-10-03"
 }
