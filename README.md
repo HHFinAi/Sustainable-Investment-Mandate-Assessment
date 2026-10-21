@@ -1,5 +1,7 @@
 # Sustainable-Investment Mandate Assessment Agent
 
+> **Responsible AI:** Analyst-controlled research; verify evidence, disclose AI assistance and protect confidential information. [Policy and project-specific checks](RESPONSIBLE_AI.md).
+
 [![Validate research workflow](https://github.com/HHFinAi/Sustainable-Investment-Mandate-Assessment/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Sustainable-Investment-Mandate-Assessment/actions/workflows/validate.yml)
 
 **Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
